@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94CD2DBF-6BE5-4184-849D-496582341E01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pryEstructuraDeDatos</RootNamespace>
+    <AssemblyName>pryEstructuraDeDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsArbolBinario.cs" />
+    <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaDoble.cs" />
+    <Compile Include="clsListaSimple.cs" />
+    <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
+    <Compile Include="clsBD.cs" />
+    <Compile Include="frmArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbolBinario.Designer.cs">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDeDatos.Designer.cs">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBDConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBDConsulta.Designer.cs">
+      <DependentUpon>frmBDConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCola.Designer.cs">
+      <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosDeDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosDeDesarrollador.Designer.cs">
+      <DependentUpon>frmDatosDeDesarrollador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoble.Designer.cs">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPila.Designer.cs">
+      <DependentUpon>frmPila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepasoDeOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepasoDeOperaciones.Designer.cs">
+      <DependentUpon>frmRepasoDeOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmArbolBinario.resx">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDeDatos.resx">
+      <DependentUpon>frmBaseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBDConsulta.resx">
+      <DependentUpon>frmBDConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCola.resx">
+      <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosDeDesarrollador.resx">
+      <DependentUpon>frmDatosDeDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDoble.resx">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPila.resx">
+      <DependentUpon>frmPila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepasoDeOperaciones.resx">
+      <DependentUpon>frmRepasoDeOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Pila.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insercion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insercion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-05-09 135136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_5659.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smaller Network Connection Background1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
